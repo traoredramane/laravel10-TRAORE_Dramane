@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?PowerDesigner signature="Workspace" version="15.1.0.2850"?>
+<!-- Veuillez ne pas modifier ce fichier -->
+
+<Workspace>
+	<Local Expanded="Yes">
+		<Model Expanded="Yes" ID="{8D5CB27E-48F8-4433-B078-4EC24BAB354B}" Name="Gestion des salles" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="Gestion des salles.moo"/>
+		<Model Expanded="Yes" ID="{C329985B-C309-43DD-828A-3ADBCBB81663}" Name="ModelePhysiqueDonnees_2" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="../Laravel10/Laravel10/ModelePhysiqueDonnees_2.mpd"/>
+		<Model Expanded="Yes" ID="{D3391CF3-5F49-4E58-9D3F-7144E4446B24}" Name="Laravel10" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="../Laravel10/Laravel10/Laravel10.prj"/>
+		<Model Expanded="Yes" ID="{A5770B2D-31BA-41A0-8FF7-75086555F55D}" Name="Laravel 10" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="Laravel 10/Laravel 10.prj"/>
+		<Model Expanded="Yes" ID="{A5770B2D-31BA-41A0-8FF7-75086555F55D}" Name="Laravel 10" OpenedReadOnly="Yes" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="Laravel 10/Laravel 10.prj"/>
+		<Model Expanded="Yes" ID="{D3391CF3-5F49-4E58-9D3F-7144E4446B24}" Name="Laravel10" OpenedReadOnly="Yes" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="../Laravel10/Laravel10/Laravel10.prj"/>
+	</Local>
+	<BrowserModule Name="Référentiel"/>
+</Workspace>
