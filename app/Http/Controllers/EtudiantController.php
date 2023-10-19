@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Etudiant;
 use App\Models\Tuteur;
+use App\Models\Ville;
+use App\Models\Nationalite;
+use App\Models\Groupe;
 class EtudiantController extends Controller
 {
   
@@ -17,8 +20,12 @@ class EtudiantController extends Controller
   public function ajouter_etudiant()
   
   {
+    $nationalites = Nationalite::all();
+    $groupes = Groupe::all();
+    $villes = Ville::all();
     $tuteurs = Tuteur::all();
-    return view('etudiant.ajouter', compact('tuteurs'));
+    return view('etudiant.ajouter', compact('tuteurs','villes','nationalites','groupes'));
+    
   }
   
  public function ajouter_etudiant_traitement(Request $request)
@@ -30,7 +37,9 @@ class EtudiantController extends Controller
     'classe' => 'required',
     'image' => 'required',
     'tuteur' => 'required',
-    
+    'ville' => 'required',
+    'nationalite' => 'required',
+    'groupe' => 'required',
   ]);
   
   $etudiant = new Etudiant();
@@ -39,6 +48,9 @@ class EtudiantController extends Controller
   $etudiant->classe = $request->classe;
   $etudiant->photo = $request->image;
   $etudiant->tuteur_id = $request->tuteur;
+  $etudiant->ville_id = $request->ville;
+  $etudiant->nationalite_id = $request->nationalite;
+  $etudiant->groupe_id = $request->groupe;
   $etudiant->save();
   
   return redirect('/ajouter')->with('status', 'L\'étudiant a bien eté ajouter avec succés.');
@@ -48,8 +60,11 @@ class EtudiantController extends Controller
    
    $etudiants = Etudiant::find($id);
    $tuteurs = Tuteur::all();
+   $villes = Ville::all();
+   $nationalites = Nationalite::all();
+   $groupes = Groupe::all();
    
-   return view('etudiant.update', compact('etudiants', 'tuteurs'));
+   return view('etudiant.update', compact('etudiants', 'tuteurs', 'villes','nationalites','groupes'));
  }
   
   

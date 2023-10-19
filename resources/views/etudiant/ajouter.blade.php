@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PROJET 9</title>
+    <title>PROJET 10</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   <body>
@@ -11,7 +11,7 @@
     <div class="container">
   <div class="row">
     <div class="col s12">
-      <h1>AJOUTER UN ETUDIANT - LARAVEL9</h1>
+      <h1>AJOUTER UN ETUDIANT - LARAVEL10</h1>
       <hr>
     
     @if (session('status'))
@@ -63,7 +63,42 @@
     </select>
    
   </div>
+  
+  
+  
+  <div class="form-floating">
+    <div> <label for="ville" class="form-label">Ville</label></div>
+     <select class="form-select" id="ville" aria-label="Floating label select example" name="ville">
+      @foreach($villes as $ville)                                                                                                                                                                                                                                      as $ville)
+       <option value="{{$ville->id}}">{{$ville->nom}}</option>
+       @endforeach
+     </select>
+    
+   </div>
+   
+   
+  
+  <div class="form-floating">
+    <div> <label for="nationalite" class="form-label">Nationalité</label></div>
+     <select class="form-select" id="nationalite" aria-label="Floating label select example" name="nationalite">
+      @foreach($nationalites as $nationalite)                                                                                                                                                                                                                                   as $ville)
+       <option value="{{$nationalite->id}}">{{$nationalite->nom}}</option>
+       @endforeach
+     </select>
+    
+   </div>
  
+ 
+   <div class="form-floating">
+    <div> <label for="groupe" class="form-label">Ville</label></div>
+     <select class="form-select" id="groupe" aria-label="Floating label select example" name="groupe">
+      @foreach($groupes as $groupe)                                                                                                                                                                                                                                      as $ville)
+       <option value="{{$groupe->id}}">{{$groupe->nom}}</option>
+       @endforeach
+     </select>
+    
+   </div>
+   
  
  <br>
   <button type="submit" class="btn btn-primary">AJOUTER UN ETUDIANT</button>
