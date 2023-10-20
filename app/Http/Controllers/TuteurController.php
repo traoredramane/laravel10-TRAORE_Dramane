@@ -27,6 +27,8 @@ class TuteurController extends Controller
   $request->validate([
     'nom' => 'required',
     'prenom' => 'required',
+    'contact' => 'required',
+    'profession' => 'required',
     
     
   ]);
@@ -34,6 +36,8 @@ class TuteurController extends Controller
   $tuteur = new Tuteur();
   $tuteur->nom = $request->nom;
   $tuteur->prenom = $request->prenom;
+  $tuteur->contact = $request->contact;
+  $tuteur->profession = $request->profession;
   $tuteur->save();
   
   return redirect('/ajouter2')->with('status', 'L\'étudiant a bien eté ajouter avec succés.');
@@ -41,10 +45,10 @@ class TuteurController extends Controller
  
  public function updat_tuteur($id){
    
-   $tuteurs = Tuteur::find($id);
-   $etudiants = Etudiant::all();
+   $tuteur = Tuteur::find($id);
+   $etudiant = Etudiant::all();
    
-   return view('tuteur.updat', compact('tuteurs'));
+   return view('tuteur.updat', compact('tuteur','etudiant'));
  }
   
   
@@ -52,14 +56,16 @@ class TuteurController extends Controller
   $request->validate([
     'nom' => 'required',
     'prenom' => 'required',
-
+    'contact' => 'required',
+    'profession' => 'required',
     
   ]);
   
   $tuteur = Tuteur::find($request->id);
   $tuteur->nom = $request->nom;
   $tuteur->prenom = $request->prenom;
-  
+  $tuteur->contact = $request->contact;
+  $tuteur->profession = $request->profession;
   $tuteur->update();
   
   return redirect('/tuteur')->with('status', 'L\'étudiant a bien eté modifié avec succés.');

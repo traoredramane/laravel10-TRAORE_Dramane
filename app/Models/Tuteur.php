@@ -14,6 +14,8 @@ class Tuteur extends Model
     protected $fillable = [
         'nom',
         'prenom',
+        'contact',
+        'profession',
        
     ];
     

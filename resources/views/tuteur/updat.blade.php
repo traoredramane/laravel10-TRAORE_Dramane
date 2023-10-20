@@ -31,18 +31,31 @@
       <form action="/updat/traitement" method="POST">
       @csrf
       
-      <input type="text" name="id" style="display: none;" value="{{ $tuteurs->id }}">
+      <input type="text" name="id" style="display: none;" value="{{ $tuteur->id }}">
       
   <div class="mb-3">
     <label for="Nom" class="form-label">Nom</label>
-    <input type="texte" class="form-control" id="Nom" name="nom" value="{{ $tuteurs->nom }}">
+    <input type="texte" class="form-control" id="Nom" name="nom" value="{{ $tuteur->nom }}">
   </div>
   
   <div class="mb-3">
     <label for="Prenom" class="form-label">Prenom</label>
-    <input type="texte" class="form-control" id="Prenom" name="prenom" value="{{ $tuteurs->prenom }}">
+    <input type="texte" class="form-control" id="Prenom" name="prenom" value="{{ $tuteur->prenom }}">
   </div>
   
+ 
+  <div class="mb-3">
+    <label for="contact" class="form-label">Contact</label>
+    <input type="number" class="form-control" id="contact" name="contact" value="{{ $tuteur->contact }}">
+  </div>
+  
+  
+  <div class="mb-3">
+    <label for="profession" class="form-label">Profession</label>
+    <input type="texte" class="form-control" id="profession" name="profession" value="{{ $tuteur->profession }}">
+  </div>
+ 
+ 
  
  <br>
   <button type="submit" class="btn btn-primary">MODIFIER UN TUTEUR</button>

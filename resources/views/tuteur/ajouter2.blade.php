@@ -48,6 +48,27 @@
   </div>
   
   
+  <div class="mb-3">
+    <label for="contact" class="form-label">Contact</label>
+    <input type="number" class="form-control" id="contact" name="contact">
+  </div>
+  
+  
+  <div class="mb-3">
+    <label for="profession" class="form-label">Profession</label>
+    <input type="texte" class="form-control" id="profession" name="profession">
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
  <br>
   <button type="submit" class="btn btn-primary">AJOUTER UN TUTEUR</button>
   

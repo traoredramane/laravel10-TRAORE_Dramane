@@ -73,7 +73,10 @@ class EtudiantController extends Controller
     'nom' => 'required',
     'prenom' => 'required',
     'classe' => 'required',
-   
+    'image' => 'required',
+    'ville' => 'required',
+    'nationalite' => 'required',
+    'groupe' => 'required',
     
   ]);
   
@@ -81,7 +84,10 @@ class EtudiantController extends Controller
   $etudiant->nom = $request->nom;
   $etudiant->prenom = $request->prenom;
   $etudiant->classe = $request->classe;
-  
+  $etudiant->photo = $request->image;
+  $etudiant->ville_id = $request->ville;
+  $etudiant->nationalite_id = $request->nationalite;
+  $etudiant->groupe_id = $request->groupe;
   $etudiant->update();
   
   return redirect('/etudiant')->with('status', 'L\'étudiant a bien eté modifié avec succés.');

@@ -57,8 +57,9 @@
   <div class="form-floating">
    <div> <label for="tuteur" class="form-label">Tuteur</label></div>
     <select class="form-select" id="tuteur" aria-label="Floating label select example" name="tuteur">
-     @foreach($tuteurs as $tuteur)
-      <option value="{{$tuteur->id}}">{{$tuteur->nom}} {{$tuteur->prenom}}</option>
+      <option value="selected">selectionné un tuteur</option>                                                                                                                                                                                                                                     as $ville)
+      @foreach($tuteurs as $tuteur)
+     <option value="{{$tuteur->id}}">{{$tuteur->nom}} {{$tuteur->prenom}}</option>
       @endforeach
     </select>
    
@@ -69,7 +70,8 @@
   <div class="form-floating">
     <div> <label for="ville" class="form-label">Ville</label></div>
      <select class="form-select" id="ville" aria-label="Floating label select example" name="ville">
-      @foreach($villes as $ville)                                                                                                                                                                                                                                      as $ville)
+      <option value="selected">selectionné une ville</option>                                                                                                                                                                                                                                     as $ville)
+      @foreach($villes as $ville)
        <option value="{{$ville->id}}">{{$ville->nom}}</option>
        @endforeach
      </select>
@@ -81,7 +83,8 @@
   <div class="form-floating">
     <div> <label for="nationalite" class="form-label">Nationalité</label></div>
      <select class="form-select" id="nationalite" aria-label="Floating label select example" name="nationalite">
-      @foreach($nationalites as $nationalite)                                                                                                                                                                                                                                   as $ville)
+      <option value="selected">selectionné une nationalitéé</option>                                                                                                                                                                                                                                 as $ville)
+      @foreach($nationalites as $nationalite)  
        <option value="{{$nationalite->id}}">{{$nationalite->nom}}</option>
        @endforeach
      </select>
@@ -90,9 +93,10 @@
  
  
    <div class="form-floating">
-    <div> <label for="groupe" class="form-label">Ville</label></div>
+    <div> <label for="groupe" class="form-label">Groupe sanguin</label></div>
      <select class="form-select" id="groupe" aria-label="Floating label select example" name="groupe">
-      @foreach($groupes as $groupe)                                                                                                                                                                                                                                      as $ville)
+      <option value="selected">selectionné un groupe sanguin</option>                                                                                                                                                                                                                                     as $ville)
+      @foreach($groupes as $groupe) 
        <option value="{{$groupe->id}}">{{$groupe->nom}}</option>
        @endforeach
      </select>

@@ -29,6 +29,8 @@
     <th>#</th>
     <th>Nom</th>
     <th>Prenom</th>
+    <th>Contact</th>
+    <th>Profession</th>
     <th>Etudiant en charge</th>
     <th>Actions</th>
     </tr>
@@ -44,6 +46,8 @@
     <td>{{ $ide }}</td>
     <td>{{ $tuteur->nom }}</td>
     <td>{{ $tuteur->prenom }}</td>
+    <td>{{ $tuteur->contact }}</td>
+    <td>{{ $tuteur->profession }}</td>
     <td>
     @foreach($tuteur->etudiant as $etudiant)
       {{ $etudiant->nom }}
